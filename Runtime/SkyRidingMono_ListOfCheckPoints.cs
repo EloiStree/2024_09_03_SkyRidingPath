@@ -14,10 +14,16 @@ public class SkyRidingMono_ListOfCheckPoints : MonoBehaviour {
 
     public List<Vector3> GetPositions()
     {
+        if (m_checkPoints == null)
+            return new List<Vector3>();
+
         List<Vector3> positions = new List<Vector3>();
         foreach (SkyRidingCheckPointTag checkPoint in m_checkPoints)
         {
-            positions.Add(checkPoint.transform.position);
+            if(checkPoint != null)
+                positions.Add(checkPoint.transform.position);
+            else 
+                positions.Add(Vector3.zero);
         }
         return positions;
     }

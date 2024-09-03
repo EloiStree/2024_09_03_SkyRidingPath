@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkyridingMono_FaceCamera : MonoBehaviour
+public class SkyRidingMono_FaceCamera : MonoBehaviour
 {
     public Transform m_whatToRotate;
     public Camera m_cameraToFace;
