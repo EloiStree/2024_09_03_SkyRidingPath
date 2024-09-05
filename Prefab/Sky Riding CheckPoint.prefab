@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1662342435788604538}
-  - component: {fileID: 7217613814519854116}
+  - component: {fileID: 7747729469826275813}
   m_Layer: 0
   m_Name: Facing Player
   m_TagString: Untagged
@@ -65,7 +65,7 @@ Transform:
   - {fileID: 5427092223028305142}
   m_Father: {fileID: 5311248867215823762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7217613814519854116
+--- !u!114 &7747729469826275813
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,12 +74,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 187109851450971722}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 231f0d33ff235994daf2a0c4bae00689, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dbe38f89073649429fa65ee4e4ea6ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_whatToRotate: {fileID: 1662342435788604538}
   m_cameraToFace: {fileID: 0}
-  m_adjustmentAngle: 180
 --- !u!1 &203745559144204777
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,6 +18,9 @@ public class SkyRidingMono_DrawRacePath : MonoBehaviour
     public bool m_usePlayerPosition;
     public Transform m_playerPosition;
 
+    public SkyRidingMono_CenterToPointRadius m_lineWidth;
+    public SkyRidingMono_CenterToPointRadius m_lineArrowDepth;
+
 
     //public void OnValidate()
     //{
@@ -26,11 +29,14 @@ public class SkyRidingMono_DrawRacePath : MonoBehaviour
 
     public void Update()
     {
+
+
         RefreshLineDrawing();
 
         Material mat = m_lineRenderer.material;
 
-        mat.mainTextureOffset = new Vector2(mat.mainTextureOffset.x + -Time.deltaTime * m_lineSpeed, mat.mainTextureOffset.y);
+        float arrowDepth = m_lineArrowDepth.GetRadius();
+        mat.mainTextureOffset = new Vector2(mat.mainTextureOffset.x + -Time.deltaTime * m_lineSpeed* arrowDepth, mat.mainTextureOffset.y);
 
     }
 
@@ -53,6 +59,12 @@ public class SkyRidingMono_DrawRacePath : MonoBehaviour
         {
             m_lineRenderer.enabled = true;
         }
+
+        float width = m_lineWidth.GetRadius();
+        float arrowDepth = m_lineArrowDepth.GetRadius();
+        m_lineRenderer.startWidth = width;
+        m_lineRenderer.endWidth = width;
+
 
         m_whatToDraw.Clear();
         if(m_usePlayerPosition && m_playerPosition!=null)
@@ -88,7 +100,7 @@ public class SkyRidingMono_DrawRacePath : MonoBehaviour
                 m_lineRenderer.SetPosition(m_whatToDraw.Count, m_whatToDraw[0]);
             }
         }
-        m_lineRenderer.textureScale= new Vector2(GetDistanceOfPath()*m_designerDilatation, 1f);
+        m_lineRenderer.textureScale= new Vector2(GetDistanceOfPath()*m_designerDilatation, 1f*arrowDepth);
     }
 
     public float GetDistanceOfPath() { 
