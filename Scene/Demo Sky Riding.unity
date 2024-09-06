@@ -860,6 +860,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5331167619594979592, guid: 017685e0a16fd2440ae0597274716a17,
+        type: 3}
+      propertyPath: m_timeBestScoreType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5718835251551080376, guid: 017685e0a16fd2440ae0597274716a17,
         type: 3}
       propertyPath: m_LocalScale.x

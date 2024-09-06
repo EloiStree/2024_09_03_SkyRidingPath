@@ -1,23 +1,34 @@
-
-{                                                                                
-  "name": "be.elab.skyriding",                              
-  "displayName": "Sky Riding race as in Warcraft",                        
-  "version": "0.0.1",                         
-  "unity": "2018.1",                             
-  "unityRelease": "",                             
-  "description": "Tool to make sky riding race as in Warcraft in Unity3D.",                         
-  "keywords": ["Script","Tool"],                       
-  "dependencies":{},     
-  "relatedPackages":{},     
-  "samples" : [],     
-  "author" : {
-"name":"",
-"mail":"",
-"url":""},     
-  "repository":{
-"type":"Git",
-"url":"https://github.com/EloiStree/2024_09_03_SkyRidingPath.git",
-"footprint":"",
-"revision":""},     
-  "category": "Script"                   
-} 
+{
+  "name": "be.elab.skyriding",
+  "displayName": "Sky Riding Race as in Warcraft",
+  "version": "0.0.1",
+  "unity": "2018.1",
+  "unityRelease": "",
+  "description": "Tool to make sky riding race as in Warcraft in Unity3D.",
+  "keywords": [
+    "Script",
+    "Tool"
+  ],
+  "dependencies": {},
+  "relatedPackages": {},
+  "licensesUrl": "https://github.com/EloiStree/EloiStree/blob/master/LICENSE.md",
+  "samples": [
+    {
+      "displayName": "Demo Scene",
+      "description": "A sample scene that demonstrates the features of this package.",
+      "path": "Scene/Demo"
+    }
+  ],
+  "author": {
+    "name": "Eloi Stree",
+    "mail": "",
+    "url": "https://github.com/EloiStree/"
+  },
+  "repository": {
+    "type": "Git",
+    "url": "",
+    "footprint": "",
+    "revision": ""
+  },
+  "category": "Script"
+}
