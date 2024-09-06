@@ -76,26 +76,56 @@ public class SkyRidingMono_RaceReferee : MonoBehaviour
             m_isComplete = m_percentComplete >= 1f;
             CheckForEventOfStartAndEndRace();
             NotifyNextCheckPoint(m_next);
+
+
+            NotifyCurrentTime();
         }
+
+        NotifyCurrentTime();
+
 
     }
 
+    public void GetCurrentTime(out bool isRunning, out float currentTime) {
+        isRunning =m_isRunning;
+        TimeSpan t = DateTime.UtcNow.Subtract(m_playerWhenInCheckPoints[0].m_time);
+        currentTime = (float)t.TotalSeconds;
+
+    }
+    private void NotifyCurrentTimeCheckPoint()
+    {
+        GetCurrentTime(out bool isRunning, out float currentTime);
+        m_onCheckPointTimeChanged.Invoke(currentTime);
+    }
+    private void NotifyCurrentTime()
+    {
+        GetCurrentTime(out bool isRunning, out float currentTime);
+        if(isRunning)
+            m_onCurrrentTimeChanged.Invoke(currentTime);
+    }
 
     public void DebugLogText(string text) { 
     
         Debug.Log("> Text: " + text, this.gameObject);
     }
 
+    public bool m_isRunning;
     private void CheckForEventOfStartAndEndRace()
     {
         if (m_previous == null && m_next == m_raceFromCheckPoints.GetTag(0))
         {
 
             m_onRaceReadyStart.Invoke();
+            m_isRunning = false;
+            NotifyCurrentTime();
+            NotifyCurrentTimeCheckPoint();
         }
         if (m_previous == m_raceFromCheckPoints.GetTag(0) && m_next == m_raceFromCheckPoints.GetTag(1))
         {
             m_onPlayerStartedRace.Invoke();
+            m_isRunning = true;
+            NotifyCurrentTime();
+            NotifyCurrentTimeCheckPoint();
         }
         if (m_previous == m_raceFromCheckPoints.GetTag(m_raceFromCheckPoints.GetCount() - 1) && m_next == null)
         {
@@ -103,6 +133,7 @@ public class SkyRidingMono_RaceReferee : MonoBehaviour
             DateTime end = m_playerWhenInCheckPoints[m_playerWhenInCheckPoints.Length - 1].m_time;
             TimeSpan duration = end.Subtract(start);
             
+            m_isRunning = false;
             m_onNewRaceTimingInSeconds.Invoke((float)duration.TotalSeconds);
             m_onRaceComplete.Invoke();
         }
@@ -118,6 +149,8 @@ public class SkyRidingMono_RaceReferee : MonoBehaviour
     public UnityEvent m_onRaceComplete;
 
     public UnityEvent<float> m_onNewRaceTimingInSeconds;
+    public UnityEvent<float> m_onCurrrentTimeChanged;
+    public UnityEvent<float> m_onCheckPointTimeChanged;
 
     public void GetNextRaceCheckPoint(out SkyRidingCheckPointTag previous, out SkyRidingCheckPointTag next)
     {
