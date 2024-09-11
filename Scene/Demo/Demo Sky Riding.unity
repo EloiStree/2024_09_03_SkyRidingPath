@@ -128,22 +128,22 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 550696375}
     m_Modifications:
     - target: {fileID: 1524958691454759183, guid: 3560df950cd802446ad6c74799097f40,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.713
+      value: -1.3932614
       objectReference: {fileID: 0}
     - target: {fileID: 1524958691454759183, guid: 3560df950cd802446ad6c74799097f40,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2303575
+      value: 0.75768745
       objectReference: {fileID: 0}
     - target: {fileID: 1524958691454759183, guid: 3560df950cd802446ad6c74799097f40,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.014323606
+      value: 0.023259804
       objectReference: {fileID: 0}
     - target: {fileID: 1524958691454759183, guid: 3560df950cd802446ad6c74799097f40,
         type: 3}
@@ -153,17 +153,17 @@ PrefabInstance:
     - target: {fileID: 1524958691454759183, guid: 3560df950cd802446ad6c74799097f40,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1524958691454759183, guid: 3560df950cd802446ad6c74799097f40,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1524958691454759183, guid: 3560df950cd802446ad6c74799097f40,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1524958691454759183, guid: 3560df950cd802446ad6c74799097f40,
         type: 3}
@@ -180,26 +180,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1812734292645178049, guid: 3560df950cd802446ad6c74799097f40,
-        type: 3}
-      propertyPath: m_ClearFlags
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1812734292645178049, guid: 3560df950cd802446ad6c74799097f40,
-        type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0.6000121
-      objectReference: {fileID: 0}
-    - target: {fileID: 1812734292645178049, guid: 3560df950cd802446ad6c74799097f40,
-        type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1812734292645178049, guid: 3560df950cd802446ad6c74799097f40,
-        type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0.5330188
-      objectReference: {fileID: 0}
     - target: {fileID: 4617785844085231075, guid: 3560df950cd802446ad6c74799097f40,
         type: 3}
       propertyPath: m_Name
@@ -210,6 +190,93 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3560df950cd802446ad6c74799097f40, type: 3}
+--- !u!4 &345196981 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1524958691454759183, guid: 3560df950cd802446ad6c74799097f40,
+    type: 3}
+  m_PrefabInstance: {fileID: 345196980}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &550696374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 550696375}
+  - component: {fileID: 550696376}
+  - component: {fileID: 550696377}
+  m_Layer: 0
+  m_Name: Add a player with tag and a camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &550696375
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550696374}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6802615, y: 0.4726701, z: -0.008936197}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 345196981}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &550696376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550696374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211619c0c8f87b440a82e7c2cccab278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_developerNote: 'To play the game you need to add a player with the Unity Tag
+    player on it. Or override the Point following the player.
+
+
+    You also need
+    to add a camera in the game space.
+
+
+    The missing element is the drone I use
+    for testing.
+
+    Replace it.
+
+
+'
+  m_authorOfTheNote: Eloi Stree
+--- !u!114 &550696377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550696374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b16695c9bde3543840401bb1783d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_setup:
+    m_links:
+      m_namedUrls:
+      - m_linkName: Helicopter
+        m_urls: https://github.com/EloiStree/2024_09_10_HelicopterMove.git
+      - m_linkName: 'Tello '
+        m_urls: https://github.com/EloiStree/2023_02_19_KidToyDroneTelloModeCode.git
 --- !u!1 &555376401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,4 +1316,4 @@ SceneRoots:
   - {fileID: 1366870118}
   - {fileID: 749649514010457592}
   - {fileID: 1668630042}
-  - {fileID: 345196980}
+  - {fileID: 550696375}
