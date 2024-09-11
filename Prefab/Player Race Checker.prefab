@@ -302,6 +302,7 @@ MonoBehaviour:
   m_playerCheckPointIndex: -1
   m_previous: {fileID: 0}
   m_next: {fileID: 0}
+  m_isRunning: 0
   m_percentComplete: 0
   m_isComplete: 0
   m_onRaceReadyStart:
@@ -391,6 +392,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  m_onCheckPointTimeChanged:
+    m_PersistentCalls:
+      m_Calls: []
   m_onNextCheckPointChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -450,7 +454,7 @@ MonoBehaviour:
   m_designerDilatation: 3
   m_lineSpeed: 0.1
   m_usePlayerPosition: 1
-  m_playerPosition: {fileID: 0}
+  m_playerPosition: {fileID: 8576539416291340176}
   m_lineWidth: {fileID: 8366739325146300392}
   m_lineArrowDepth: {fileID: 1160742873457286550}
   m_whatToDraw:
@@ -751,8 +755,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e847e17d85269ff40b53321efa797c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_bestRaceTime: 0
-  m_lastRaceTiming: 0
+  m_timeBestScoreType: 0
+  m_bestMeasureTime: 600
+  m_lastMeasureTime: 0
   m_scoreFormat: '{0:000.000}'
   m_lastTimingChanged:
     m_PersistentCalls:
@@ -922,7 +927,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8576539416291340176}
-  - component: {fileID: 6941053242970954190}
+  - component: {fileID: 5204576877571556747}
   m_Layer: 0
   m_Name: Follow Player
   m_TagString: Untagged
@@ -944,9 +949,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8892013719003559126}
+  - {fileID: 5038584112908229432}
   m_Father: {fileID: 1134237449095991765}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6941053242970954190
+--- !u!114 &5204576877571556747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -955,12 +961,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 7071658703337385086}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd1be308a0c132341b422b8e1e8e4edc, type: 3}
+  m_Script: {fileID: 11500000, guid: 60be57ea508ca1e41bef64eaedb81786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_whatToMove: {fileID: 8576539416291340176}
   m_whatToFollow: {fileID: 0}
-  m_useLateUpdate: 1
+  m_useLateUpdate: 0
+--- !u!1 &7277610525518132375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5038584112908229432}
+  m_Layer: 0
+  m_Name: Add To Follow Player Yours
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5038584112908229432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277610525518132375}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8576539416291340176}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7705392951606689330
 GameObject:
   m_ObjectHideFlags: 0

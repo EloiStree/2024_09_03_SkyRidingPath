@@ -57,7 +57,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187109851450971722}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9997672, z: 0.021579292, w: 0}
+  m_LocalRotation: {x: -0.3231384, y: -0.66354597, z: -0.38881555, w: 0.55146253}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -204,7 +204,6 @@ GameObject:
   - component: {fileID: 5427092223028305142}
   - component: {fileID: 1084083597232494132}
   - component: {fileID: 8898747066001790074}
-  - component: {fileID: 4885182840031262418}
   m_Layer: 0
   m_Name: Quad
   m_TagString: Untagged
@@ -277,28 +276,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4885182840031262418
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1197220631658068566}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &3004113160990094606
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +381,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7463207042428576085}
   - component: {fileID: 7953179670302049528}
-  - component: {fileID: 5281702454490614931}
   m_Layer: 0
   m_Name: Trigger Sphere Zone
   m_TagString: Untagged
@@ -435,24 +411,3 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9052037580641686477}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!135 &5281702454490614931
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9052037580641686477}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
